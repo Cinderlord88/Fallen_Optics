@@ -1,17 +1,19 @@
-# Fallen_Optics
+# 👁️  Fallen Optics
 ### *Because your NPCs aren't supposed to be psychic.*
 
 **Ever whispered a secret to someone, only to have a character three rooms away mysteriously know about it?**
 
 Ever had an NPC react to your private thoughts? Reference a conversation they never witnessed? Know your plans before you've even told anyone?
 
-**Information Firewall is designed to put an end to that nonsense.**
+**Fallen Optics is designed to put an end to that nonsense.**
+
+[Derived from nerdgrl450/livingnarrative's anti-omniscience script. Many thanks to them for their clever creation and hard work.]
 
 ---
 
 ## 🔒 What Does It Do?
 
-Information Firewall is a lightweight, automatic NPC knowledge-management script that helps AI Dungeon maintain realistic boundaries between what characters know and what they don't.
+Fallen Optics is a lightweight, automatic NPC knowledge-management script that helps AI Dungeon maintain realistic boundaries between what characters know and what they don't.
 
 - 👁️ **No More Magical Eavesdropping** — NPCs shouldn't automatically know about conversations they never witnessed.
 - 🤫 **Secrets Stay Secret** — Private information doesn't automatically spread throughout the cast.
@@ -24,13 +26,13 @@ Information Firewall is a lightweight, automatic NPC knowledge-management script
 
 **No commands. No character sheets. No micromanagement.**
 
-Information Firewall operates automatically through AI Dungeon's scripting system, using lightweight knowledge tracking and scene-aware narrative guidance.
+Fallen Optics operates automatically through AI Dungeon's scripting system, using lightweight knowledge tracking and scene-aware narrative guidance.
 
 Designed for everything from political intrigue and Regency romance to espionage, murder mysteries, science fiction, and fantasy adventures.
 
 ## ⚡ What's Different About v2?
 
-The original Information Firewall could be too aggressive, incorrectly identify witnesses, and interfere with legitimate narration.
+The original Anti-Omniscience could be too aggressive, incorrectly identify witnesses, and interfere with legitimate narration.
 
 Version 2 rebuilds the underlying knowledge logic with more conservative detection, improved handling of information sharing, and safeguards for regenerated outputs.
 
@@ -44,8 +46,43 @@ Version 2 rebuilds the underlying knowledge logic with more conservative detecti
 
 Passed 24 isolated regression tests. Live AI Dungeon storytelling validation is still pending.
 
-*Information Firewall helps reduce unrealistic NPC knowledge, but AI-generated storytelling remains probabilistic. Perfect enforcement is neither promised nor intended.*
+*Fallen Optics helps reduce unrealistic NPC knowledge, but AI-generated storytelling remains probabilistic. Perfect enforcement is neither promised nor intended.*
 
 ---
 
 **Your secrets should have witnesses, not a global broadcast system.** 🔒
+
+-------------------------------------------------------------------------------------------------------
+
+Fallen Optics is my version of Anti-Omniscience. I've made significant changes to the script to increase reliability and stability while reducing leaks into the story.
+
+
+Issue Found (X) /  Replacement behavior (*)
+--------------------------------------------------------
+(X) Mentioning Character makes it present	// 
+(*) Requires explicit evidence of presence
+
+(X) Private thoughts become NPC knowledge	//     
+(*) Thoughts aren't recorded as disclosures
+
+(X) Secrets spread through keyword matches	//   
+(*) Transfers require specific speakers, recipients, and information
+
+(X) Valid dialogue gets deleted	//  
+ (*) No destructive dialogue filtering
+
+(X) Context reprocesses previous actions //
+(*) Context no longer replays history
+
+(X) Retry creates contradictory knowledge	//  
+(*) Adds rollback for regenerated outputs when action counts match
+
+(X) Huge knowledge restrictions in context	//  
+(*) Shorter, more focused narrative guidance
+
+
+
+I'm still refining this, but there should be noticeable improvement.  I'll likely do another update soon as soon as I can run more tests.
+
+----------------------------------------------------------------------------
+Derived from nerdgrl450/livingnarrative's anti-omniscience script. Many thanks to them for their clever creation and hard work.
